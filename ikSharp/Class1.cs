@@ -4,27 +4,30 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using ikSharp.Models;
+using ikSharp.Models.Joint;
 
 
 namespace ikSharp
 {
-    public class Robot
+    public class OldRobot
     {
 	    public Joint[] Joints { get; set; }
 
 	    public Vector3 ForwardKinematics(float[] angles)
 	    {
-		    Vector3 prevPoint = Joints[0].Position;
-		    Quaternion rotation = Quaternion.Identity;
-		    for (int i = 1; i < Joints.Length; i++)
-		    {
-			    // Rotates around a new axis
-			    rotation *= new Quaternion(Joints[i - 1].Axis, angles[i - 1]);
-			    Vector3 nextPoint = prevPoint + Vector3.Transform(  Joints[i].StartOffset, rotation);
+		    //Vector3 prevPoint = Joints[0].Position;
+		    //Quaternion rotation = Quaternion.Identity;
+		    //for (int i = 1; i < Joints.Length; i++)
+		    //{
+			   // // Rotates around a new axis
+			   // rotation *= new Quaternion(Joints[i - 1].Axis, angles[i - 1]);
+			   // Vector3 nextPoint = prevPoint + Vector3.Transform(  Joints[i].StartOffset, rotation);
 
-			    prevPoint = nextPoint;
-		    }
-		    return prevPoint;
+			   // prevPoint = nextPoint;
+		    //}
+		    //return prevPoint;
+		    throw new NotImplementedException();
 	    }
 
 	    public float DistanceFromTarget(Vector3 target, float[] angles)
@@ -82,10 +85,10 @@ namespace ikSharp
 	    public float SamplingDistance { get; set; }
     }
 
-	public class Joint
-	{
-		public Vector3 Axis { get; set; }
-		public Vector3 Position { get; set; }
-		public Vector3 StartOffset { get; set; }
-	}
+	//public class Joint
+	//{
+	//	public Vector3 Axis { get; set; }
+	//	public Vector3 Position { get; set; }
+	//	public Vector3 StartOffset { get; set; }
+	//}
 }

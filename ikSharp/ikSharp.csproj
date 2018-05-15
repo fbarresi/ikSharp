@@ -45,6 +45,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Extensions\UrdfExtensions.cs" />
+    <Compile Include="Extensions\VectorExtensions.cs" />
+    <Compile Include="Extensions\XAttributeExtensions.cs" />
+    <Compile Include="Models\Link\Cylinder.cs" />
+    <Compile Include="Models\Link\Inertia.cs" />
+    <Compile Include="Models\Link\Inertial.cs" />
+    <Compile Include="Models\Link\Collision.cs" />
+    <Compile Include="Models\Link\Link.cs" />
+    <Compile Include="Models\Joint\Axis.cs" />
+    <Compile Include="Models\Joint\Calibration.cs" />
+    <Compile Include="Models\Joint\Dynamics.cs" />
+    <Compile Include="Models\Joint\Joint.cs" />
+    <Compile Include="Models\Joint\Limit.cs" />
+    <Compile Include="Models\Joint\Mimic.cs" />
+    <Compile Include="Models\Joint\SafetyController.cs" />
+    <Compile Include="Models\Link\Box.cs" />
+    <Compile Include="Models\Link\Geometry.cs" />
+    <Compile Include="Models\Link\Mesh.cs" />
+    <Compile Include="Models\Link\Sphere.cs" />
+    <Compile Include="Models\Link\Color.cs" />
+    <Compile Include="Models\Link\Material.cs" />
+    <Compile Include="Models\Link\Texture.cs" />
+    <Compile Include="Models\Link\Visual.cs" />
+    <Compile Include="Models\Origin.cs" />
+    <Compile Include="Models\Robot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
