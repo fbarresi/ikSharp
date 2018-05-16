@@ -26,7 +26,7 @@ namespace ikSharp.Models
 		{
 			XDocument xdoc = XDocument.Load(filename);
 			XElement node = xdoc.Element("robot");
-			Name = node.Attribute("name").Value;
+			Name = node.Attribute("name")?.Value;
 
 			Materials = node.ReadMaterials(); // multiple
 			Links = node.ReadLinks(); // multiple

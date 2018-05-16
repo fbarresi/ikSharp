@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<robot name="universal_robot">
+<robot name="UR5">
 
   <link name="base_link"/>
 
