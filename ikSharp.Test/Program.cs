@@ -12,6 +12,11 @@ namespace ikSharp.Test
 		static void Main(string[] args)
 		{
 			var robot = new Robot("UR5.urdf");
+
+			var zero = robot.ForwardKinematics(new double[] {0, 0, 0, 0, 0, 0});
+			Console.WriteLine(zero);
+
+			Console.ReadLine();
 		}
 	}
 }

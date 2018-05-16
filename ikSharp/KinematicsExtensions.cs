@@ -18,10 +18,10 @@ namespace ikSharp
 	    {
 		    var prevPoint = robot.Joints[0].Origin.Xyz.ToVector3();
 			var rotation = Quaternion.Identity;
-			for (int i = 1; i < robot.Joints.Count; i++)
+			for (int i = 0; i < robot.Joints.Count-1; i++)
 			{
 				// Rotates around a new axis
-				rotation *= new Quaternion(robot.Joints[i - 1].Axis.Xyz.ToVector3(), (float)angles[i - 1]);
+				rotation *= new Quaternion(robot.Joints[i].Axis.Xyz.ToVector3(), (float)angles[i]);
 				Vector3 nextPoint = prevPoint + Vector3.Transform(robot.Joints[i].Origin.Xyz.ToVector3(), rotation);
 
 				prevPoint = nextPoint;
