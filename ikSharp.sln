@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ikSharp", "ikSharp\ikSharp.csproj", "{B680E448-36C9-4AAA-B8F2-D4E4DE6198DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8B6368F7-5F8E-4C01-9EFA-F1C41887145A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ikSharp.Test", "ikSharp.Test\ikSharp.Test.csproj", "{6A48B24D-3D57-4EB2-8904-6FAEBE161EF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{B680E448-36C9-4AAA-B8F2-D4E4DE6198DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B680E448-36C9-4AAA-B8F2-D4E4DE6198DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B680E448-36C9-4AAA-B8F2-D4E4DE6198DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A48B24D-3D57-4EB2-8904-6FAEBE161EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A48B24D-3D57-4EB2-8904-6FAEBE161EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A48B24D-3D57-4EB2-8904-6FAEBE161EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A48B24D-3D57-4EB2-8904-6FAEBE161EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A48B24D-3D57-4EB2-8904-6FAEBE161EF6} = {8B6368F7-5F8E-4C01-9EFA-F1C41887145A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7CD17D3-AF16-4560-9640-1DF987D43C1C}

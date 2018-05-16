@@ -44,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Extensions\MathExtensions.cs" />
+    <Compile Include="KinematicsExtensions.cs" />
     <Compile Include="Extensions\UrdfExtensions.cs" />
     <Compile Include="Extensions\VectorExtensions.cs" />
     <Compile Include="Extensions\XAttributeExtensions.cs" />
