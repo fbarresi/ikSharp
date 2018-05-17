@@ -6,7 +6,7 @@
   <joint name="shoulder_pan_joint" type="revolute">
     <parent link="base_link"/>
     <child link="shoulder_link"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.1"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.089159"/>
     <axis xyz="0.0 0.0 1.0"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
@@ -16,20 +16,20 @@
       <geometry>
         <cylinder length="0.1" radius="0.1"/>
       </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.05"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
         <cylinder length="0.1" radius="0.1"/>
       </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.05"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     </collision>
   </link>
 
   <joint name="shoulder_lift_joint" type="revolute">
     <parent link="shoulder_link"/>
     <child link="upper_arm_link"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.1 0.0"/>
+    <origin rpy="0.0 0.13585 0.0" xyz="0.0 1.57075 0.0"/>
     <axis xyz="0.0 1.0 0.0"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
@@ -45,16 +45,16 @@
       <geometry>
         <cylinder length="0.5" radius="0.05"/>
       </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.25"/>
+      <origin rpy="0.0 0.0 0.28" xyz="0.0 0.0 0.25"/>
     </collision>
   </link>
 
   <joint name="elbow_joint" type="revolute">
     <parent link="upper_arm_link"/>
     <child link="forearm_link"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.1 0.5"/>
-    <axis xyz="0.0 -1.0 0.0"/>
-    <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.1197 0.42500"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <limit effort="150.0" lower="-3.14" upper="3.14" velocity="3.15"/>
   </joint>
 
   <link name="forearm_link">
@@ -75,9 +75,9 @@
   <joint name="wrist_1_joint" type="revolute">
     <parent link="forearm_link"/>
     <child link="wrist_1_link"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.5"/>
+    <origin rpy="0.0 1.57075 0.0" xyz="0.0 0.0 0.39225"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
+    <limit effort="28.0" lower="-6.28" upper="6.28" velocity="3.2"/>
   </joint>
 
   <link name="wrist_1_link">
@@ -98,9 +98,9 @@
   <joint name="wrist_2_joint" type="revolute">
     <parent link="wrist_1_link"/>
     <child link="wrist_2_link"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.1 0.0"/>
+    <origin rpy="0.0 0.093 0.0" xyz="0.0 0.1 0.0"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
+    <limit effort="28.0" lower="-6.28" upper="6.28" velocity="3.2"/>
   </joint>
 
   <link name="wrist_2_link">
@@ -121,9 +121,9 @@
   <joint name="wrist_3_joint" type="revolute">
     <parent link="wrist_2_link"/>
     <child link="wrist_3_link"/>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.1"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.09465"/>
     <axis xyz="0.0 1.0 0.0"/>
-    <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
+    <limit effort="28.0" lower="-6.28" upper="6.28" velocity="3.2"/>
   </joint>
 
   <link name="wrist_3_link">
@@ -144,7 +144,7 @@
   <joint name="ee_fixed_joint" type="fixed">
     <parent link="wrist_3_link"/>
     <child link="ee_link"/>
-    <origin rpy="0.0 0.0 1.57" xyz="0.0 0.1 0.0"/>
+    <origin rpy="0.0 0.0 1.57" xyz="0.0 0.0823 0.0"/>
   </joint>
 
   <link name="ee_link">
